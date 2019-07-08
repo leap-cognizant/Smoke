@@ -1,4 +1,4 @@
-exports.config = {
+xports.config = {
 
   //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
   //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
@@ -14,7 +14,7 @@ exports.config = {
   ],
 
   //Communicates directly Chrome Driver or Firefox Driver, bypassing any Selenium Server. If this is true, settings for seleniumAddress and seleniumServerJar will be ignored
-  //directConnect: true,
+  directConnect: true,
 
   //Sauce Labs - While using sauce, comment the seleniumAddress
   sauceUser: process.env.SAUCE_USERNAME,
