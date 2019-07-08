@@ -6,7 +6,7 @@ exports.config = {
 
   //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
 
-  //seleniumAddress: 'http://localhost:4444/wd/hub',
+ seleniumAddress: 'http://localhost:4444/wd/hub',
 
 
 
