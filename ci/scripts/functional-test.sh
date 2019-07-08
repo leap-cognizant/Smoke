@@ -16,6 +16,10 @@ chmod 777 tests
 ls -ltr
 
 cd html-source
+CONF=protractor.conf.local.js
+if [ $USE_SAUCE -ne 0 ]; then  
+	CONF=protractor.conf.sauce.js
+fi
 
 npm install grunt --save-dev
 npm install jasmine-reporters --save-dev
@@ -27,7 +31,8 @@ nohup webdriver-manager start &
 sleep 5
 
 echo "Functional test cases execution staring ..."
-protractor protractor.conf.js
+protractor $CONF
+
 
 #if [ $? -ne 0 ]; then  
 #	TEST_FAILURE=1
