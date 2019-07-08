@@ -54,19 +54,13 @@ exports.config = {
   // testing framework, jasmine is the default
   framework: 'jasmine2',
 
-  onPrepare: function() {
+    onPrepare: function() {
     var jasmineReporters = require('jasmine-reporters');
-    var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
-
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
       savePath: '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults',
       filePrefix: 'xmloutput'
     }));
-
-    jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-      savePath: '../src/main/webapp/WEB-INF/static/resources/js/tests/e2e/testresults'
-    }));
-
   }
+
 };
