@@ -1,4 +1,12 @@
-exports.config = {
+onComplete: function () {
+
+        var printSessionId = function (jobName) {
+            browser.getSession().then(function (session) {
+                console.log('SauceOnDemandSessionID=' + session.getId() + ' job-name=' + jobName);
+            });
+        }
+        printSessionId("Insert Job Name Here");
+    }exports.config = {
 
   //seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.40.0.jar',
   //chromeDriver: 'node_modules/protractor/selenium/chromedriver',  IEDriverServer3.4.0.zip
@@ -52,7 +60,15 @@ exports.config = {
 
   // testing framework, jasmine is the default
   framework: 'jasmine2',
+  onComplete: function () {
 
+        var printSessionId = function (jobName) {
+            browser.getSession().then(function (session) {
+                console.log('SauceOnDemandSessionID=' + session.getId() + ' job-name=' + jobName);
+            });
+        }
+        printSessionId("Smoke");
+    },
   onPrepare: function() {
     var jasmineReporters = require('jasmine-reporters');
 
