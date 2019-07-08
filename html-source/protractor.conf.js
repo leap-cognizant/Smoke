@@ -113,7 +113,7 @@ exports.config = {
             browser.getSession().then(function (session) {
 
                 console.log('SauceOnDemandSessionID=' + session.getId() + ' job-name=' + jobName);
-
+                process.env.SauceOnDemandSessionID=session.getId();
             });
 
         }
