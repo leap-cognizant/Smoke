@@ -44,7 +44,7 @@ pipeline {
 
 					slackSend color: "cceef9", message: "`Archieving junit xml test results`"
 					slackSend color: "cceef9", message: "`Destroying Docker container`"
-					slackSend color: "cceef9", message: "`Smoke Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<${env.SauceLabsVideo}|SauceLabs Video>)"
+					slackSend color: "cceef9", message: "`Smoke Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>) (<${env.BUILD_URL}${"testReport/"}|TestReports>) (<https://app.saucelabs.com/dashboard/tests|SauceLabs Video>)"
 
 				}
 			)
